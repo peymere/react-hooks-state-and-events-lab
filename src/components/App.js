@@ -6,6 +6,7 @@ function App() {
   const [darkMode, setDarkMode] = useState(false)
 
   const appClass = darkMode ? "App dark" : "App light"
+  const appText = darkMode ? "Dark Mode" : "Light Mode"
 
   const handleDarkMode = () => {
     setDarkMode(!darkMode)
@@ -15,7 +16,7 @@ function App() {
     <div className={appClass}>
       <header>
         <h2>Shopster</h2>
-        <button onClick={handleDarkMode}>{appClass}</button>
+        <button onClick={handleDarkMode}>{appText}</button>
       </header>
       <ShoppingList items={itemData} />
     </div>
